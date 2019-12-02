@@ -34,7 +34,7 @@ job "nginx-fail" {
         cpu    = 200
         memory = 100000
         network {
-          port "http" { static = 8080 }
+          port "http" { static = 1234 }
         }
       }
 
