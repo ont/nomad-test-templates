@@ -23,7 +23,7 @@ job "nginx-local" {
       driver = "docker"
 
       config {
-        image = "localhost:5000/nginx"
+        image = "localhost:5000/nginx:{{version}}"
 
         port_map {
           port_80 = 80
