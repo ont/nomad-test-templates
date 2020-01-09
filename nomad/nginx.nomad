@@ -34,7 +34,7 @@ job "nginx" {
         cpu    = 200
         memory = 100
         network {
-          port "http" { static = 8080 }
+          port "http" { static = 8888 }
         }
       }
 
