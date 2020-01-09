@@ -35,6 +35,7 @@ job "nginx-missing-kv" {
           some_var = {{ key "not/existing/key" }}
         EOH
 
+        destination = "templates/some_template.ini"
       }
 
       resources {
