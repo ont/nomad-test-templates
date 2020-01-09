@@ -24,10 +24,6 @@ job "nginx-missing-kv" {
 
       config {
         image = "nginx:${NOMAD_META_VERSION}"
-
-        port_map {
-          port_80 = 80
-        }
       }
 
       template {
@@ -41,21 +37,10 @@ job "nginx-missing-kv" {
       resources {
         cpu    = 200
         memory = 100
-        network {
-          port "http" { static = 8888 }
-        }
       }
 
       service {
         name = "nginx"
-        port = "http"
-        check {
-          name     = "nginx-check"
-          port     = "http"
-          type     = "tcp"
-          interval = "2s"
-          timeout  = "2s"
-        }
       }
     }
   }
