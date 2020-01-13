@@ -1,0 +1,7 @@
+---
+before_deploy:
+  - type: consul
+    key: some/maintenance/key
+    value: true
+
+some wrong yaml file

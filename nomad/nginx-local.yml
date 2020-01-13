@@ -1,0 +1,15 @@
+# vim: set ts=2 sts=2 sw=2 expandtab smarttab:
+---
+before_deploy:
+  - type: consul
+    key: some/maintenance/key
+    value: true
+
+after_deploy:
+  - type: exec
+    task: nginx
+    command: touch /tmp/some_file.txt
+
+  - type: consul
+    key: some/maintenance/key
+    value: false
