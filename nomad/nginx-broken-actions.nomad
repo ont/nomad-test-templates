@@ -19,6 +19,7 @@ job "nginx-broken-syntax" {
       mode = "delay"
     }
 
+    # some comment
     >>> BROKE ME HERE <<<
 
     task "nginx" {
