@@ -4,4 +4,4 @@ before_deploy:
     key: some/maintenance/key
     value: true
 
-some wrong yaml file
+--> some wrong yaml file
