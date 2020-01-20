@@ -10,6 +10,18 @@ after_deploy:
     task: nginx
     command: touch /tmp/some-file.txt
 
+  - type: exec
+    task: nginx
+    command: echo "asdf123" > /tmp/some-file.txt
+
+  - type: exec
+    task: nginx
+    command: cat /tmp/some-file.txt
+
+  - type: exec
+    task: nginx
+    command: ls /tmp
+
   - type: consul
     key: some/maintenance/key
     value: false
