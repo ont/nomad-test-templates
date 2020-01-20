@@ -8,7 +8,7 @@ before_deploy:
 after_deploy:
   - type: exec
     task: nginx
-    command: touch /tmp/some/file.txt
+    command: touch /tmp/some-file.txt
 
   - type: consul
     key: some/maintenance/key
