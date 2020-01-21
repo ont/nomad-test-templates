@@ -30,6 +30,15 @@ job "nginx-local" {
         }
       }
 
+      template {
+        data = <<EOH
+            TEST_ME_VALUE=123
+            MORE_LINES="for test"
+        EOH
+        destination = "configs/.env"
+        change_mode = "restart"
+      }
+
       resources {
         cpu    = 200
         memory = 100
