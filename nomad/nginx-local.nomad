@@ -34,6 +34,7 @@ job "nginx-local" {
         data = <<EOH
             TEST_ME_VALUE=123
             MORE_LINES="for test"
+            SOME_MORE="value"
         EOH
         destination = "configs/.env"
         change_mode = "restart"
