@@ -42,18 +42,18 @@ job "nginx-local" {
 
       resources {
         cpu    = 200
-        memory = 100
+        memory = 110
         network {
-          port "http" {}
+          port "port_80" {}
         }
       }
 
       service {
         name = "nginx"
-        port = "http"
+        port = "port_80"
         check {
           name     = "nginx-check"
-          port     = "http"
+          port     = "port_80"
           type     = "tcp"
           interval = "2s"
           timeout  = "2s"
