@@ -41,13 +41,13 @@ job "nginx" {
       service {
         name = "nginx"
         port = "http"
-        check {
-          name     = "nginx-check"
-          port     = "http"
-          type     = "tcp"
-          interval = "2s"
-          timeout  = "2s"
-        }
+        # check {
+        #   name     = "nginx-check"
+        #   port     = "http"
+        #   type     = "tcp"
+        #   interval = "2s"
+        #   timeout  = "2s"
+        # }
       }
     }
   }
