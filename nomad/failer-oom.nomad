@@ -31,7 +31,7 @@ job "failer-oom" {
 
       resources {
         cpu    = 200
-        memory = 1
+        memory = 10
       }
 
       service {
