@@ -12,7 +12,7 @@ job "nginx-multi" {
   }
 
   group "nginx-multi" {
-    count = 2
+    count = 3
     
     restart {
       attempts = 5
